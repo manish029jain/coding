@@ -1,0 +1,49 @@
+//code written in java
+Set s=new TreeSet();
+// to  load dictionary
+Boolean load(final String dictionary)
+{
+FileInputStream in=null;
+try
+{
+in=new FileInputStream(dictionary);
+int c;
+while((c=in.read())!=-1)
+{
+s.add(c);
+}
+}catch(Exception e){}
+return true;
+}
+// to check text
+Boolean check(final String text)
+{
+return(s.contains(text));
+}
+// to  load dictionary
+Boolean unload(void)
+{
+s.clear();
+}
+// returns number of words  in dictionary
+unsigned int size(void)
+{
+int d_size=0;
+Iterator i=s.iterator();
+while(i.hasNext())
+{
+d_size++;
+i.next();
+}
+return d_size;
+}
+
+
+
+1.	Getrusage is used to calculate time taken to execute code.
+2.	2
+3.	We used before and after  keywords 4 times and every time both represent deferent  values.
+4.	 We have an array word of length LENGTH, an counter words and int index. In for loop we  initialise an int c=fgetc(fp),where this function  returns next character. Condition of for loop is  c not equal to EOF. Every time for loop iterate c gets next character with the help of fgetc() function. now if  c is alphabet of apostrophe  the will store it in word array and increment in index. Check if index is greater then length then ignore rest letters using while loop. If c is numeric value then ignore words with number. After founding the whole word terminate current word by storing value \0.now check this word by using CHECK function. Calculate ti_check. And for  the next word set index=0
+5.	If we use fscanf then it will not detect numeric values.
+6.	Because parameter of check is text to be checked so it’s a constant and in load also parameter is dictionary and its constant.
+
